@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+<%
+var id = entry.id
+var date = entry.date
+var weather = entry.data
+%>
+<h1><%= subtitle %></h1>
+<p>Entry ID: <b><%- id %></b></p>
+<p>Date:  <b><%-date%></b></p>
+<p>Weather in the city:  <b><%-weather.name %></b></p>
+
+<p>Temperature:  <b><%-(weather.main.temp - 273).toFixed(1) + ' \u00B0C' %></b></p>
+<p>Pressure:  <b><%-weather.main.pressure + ' гПа' %> </b></p>
+<p>Humidity:  <b><%-weather.main.humidity + ' %' %></b></p>
+<p>Cloudiness:  <b><%-weather.clouds.all + ' %' %></b></p>
+<p>Wind speed :  <b><%-weather.wind.speed + ' м/с' %></b></p>
+</body>
+</html>

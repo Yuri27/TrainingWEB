@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<div class="error">
+    <h1><b><%= subtitle %></b></h1>
+    <%
+    if(status === '' ){ %>
+    <h2><b>message: </b><%= message %></h2>
+    <pre><b>stack: </b><%= stack %></pre>
+<%}
+    else{ %>
+    <h2><b>status: </b><%= status %></h2>
+    <h2><b>message: </b><%= message %></h2>
+    <pre><b>stack: </b><%= stack %></pre>
+    <%}%>
+</div>
+</body>
+</html>
